@@ -1,0 +1,11 @@
+image: nvcr.io/nvidia/pytorch:20.12-py3
+run_algo_align:
+    script:
+        - pip install -r requirements.txt
+        - python synthetic_unsupervised.py --exp_name 1_synth_unsupervised_dbn77 --data_path /data/unsupervised-scoring/act/ --dataset_name synth
+    tags:
+        - One_32GB_GPU
+    only:
+        - master
+    when: manual
+    allow_failure: false

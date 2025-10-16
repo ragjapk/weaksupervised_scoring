@@ -1,0 +1,16 @@
+https://rni.tcsapps.com/gitlab/rni-compute/media-entertainment-advertising-research/dl-approaches-for-audio/unsupervised-scoring
+
+pip install -r requirements.txt
+python synthetic_unsupervised.py --exp_name 1_synth4_unsupervised_dbn18 --data_path /workspace/data/unsupervised-scoring/act/ --dataset_name synth4
+
+
+pip install -r requirements.txt
+python synthetic_unsupervised.py --exp_name 20_synth_unsupervised_gdbn1 --data_path /workspace/data/unsupervised-scoring/act/ --dataset_name synth
+pip install -r requirements.txt
+python unsupervised.py --exp_name 11_journal_unsupervised --data_path /workspace/data/unsupervised-scoring/act/ --dataset_name journal
+
+pip install -r requirements.txt
+python combined_model_exp_test.py --exp_name 11_college_unsupervised --data_path /workspace/data/unsupervised-scoring/act/ --dataset_name college
+
+
+order preserving behaviour - monotonicity
